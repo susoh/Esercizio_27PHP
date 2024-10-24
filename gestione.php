@@ -14,7 +14,11 @@
         if (isset($_POST["used"])) {
             $usato = true;
         }
-        
+        $metodo = $_POST["pay"];
+        $costoTotale = $costo;
+        if ($usato) {
+            $costoTotale = $costo - $costo*0,2;
+        }
     ?>
 </body>
 </html>
